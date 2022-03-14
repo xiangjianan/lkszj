@@ -1,0 +1,37 @@
+{
+  "id": "3243368",
+  "name": "lkszj",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2127180",
+      "name": "沙漏",
+      "font_class": "shalou",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "2571137",
+      "name": "沙漏",
+      "font_class": "shalou1",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "15472168",
+      "name": "进度_沙漏",
+      "font_class": "jindu_shalou",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "16852584",
+      "name": "倒计时",
+      "font_class": "countDown",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}
