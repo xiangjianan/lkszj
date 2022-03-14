@@ -1,6 +1,6 @@
 :root {
     --slider: #000;
-    --input-placeholder: #aaa;
+    --input-placeholder: #999;
 }
 
 html,
@@ -178,10 +178,9 @@ input::-ms-input-placeholder {
     top: 50%;
     transform: translate(0, -50%);
     color: black;
-    width: 50px;
-    margin-left: 20px;
+    width: 58px;
+    margin-left: 24px;
     border: 1px solid rgba(33, 33, 33, 1);
-    padding: 5px 10px;
 }
 .header-left-logo img {
     width: 100%;
@@ -236,20 +235,13 @@ input::-ms-input-placeholder {
     border-right: 1px solid var(--slider);
 }
 
-.time-day {
+.time-day #t_d {
     position: relative;
     display: inline-block;
     width: 100%;
     line-height: 50px;
     text-align: center;
     font-size: 2rem;
-}
-
-.time-day .countdown {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    font-size: 1rem;
 }
 
 .outer {
@@ -287,33 +279,51 @@ input::-ms-input-placeholder {
 #confirm .confirms {
     border-radius: 5px;
     width: 100%;
-    height: 60%;
-    margin-top: 20%;
+    height: 90%;
+    margin-top: 5%;
 }
 
-/* #confirm .confirms span {
-    display: inline-block;
-    width: 100%;
-    color: #bbb;
-    text-align: center;
-} */
+#confirm .confirms>div {
+    height: 100%;
+}
 
 #confirm .confirms p {
+    color: #ededed;
+    font-size: 0.9rem;
+    text-align: justify;
+    line-height: 23px;
+    margin-bottom: 8px;
+    letter-spacing: 2px;
+}
+
+#confirm .confirms p.confirm-title {
+    margin: 20px 0 30px;
     text-align: center;
-    color: #eee;
-    font-size: 1.8rem;
+    color: #f4f4f4;
+    font-size: 2rem;
 }
-
-#confirm .confirms p button.sure,
-#confirm .confirms p button.not {
+#confirm .confirms p.little-title {
+    font-weight: bold;
+    color: #fff;
+    margin: 15px 0 10px;
+    text-align: center;
+}
+#confirm .confirms .confirm-text {
     border: 1px solid #ddd;
-    padding: 8px 100px;
-    margin: 1rem;
-    color: #aaaaaa;
+    height: 80%;
+    padding: 15px;
+    overflow: auto;
 }
 
-#confirm .confirms p button.sure:hover,
-#confirm .confirms p button.not:hover {
+#confirm .confirms span.sure,
+#confirm .confirms span.not {
+    border: 1px solid #ddd;
+    margin-top: 25px;
+    color: #fff;
+}
+
+#confirm .confirms span.sure:hover,
+#confirm .confirms span.not:hover {
     background: #dedede;
     color: #111;
 }
@@ -335,7 +345,7 @@ input::-ms-input-placeholder {
     .time span {
         line-height: 18px;
     }
-    .time-day {
+    .time-day #t_d {
         line-height: 40px;
         font-size: 1.8rem;
     }
