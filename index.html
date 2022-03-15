@@ -79,12 +79,36 @@
         </div>
     </div>
     <!-- 弹框部分 -->
-    <div class="center">
+    <div class="center center-notice-modal">
+        <div class="center-row center-row-notice">
+            <div class="notice-modal animate__animated animate__fadeOutDown col-md-6 offset-md-3">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 id="notice-msg"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="center center-alert-modal">
         <div class="center-row center-row-alert">
             <div class="alert-modal animate__animated animate__fadeOutDown col-md-6 offset-md-3">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h2 id="alert-msg"></h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-md-8 offset-md-2">
+                            simple
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-6">
+                            <span class="alert-no btn btn-secondary">再想想</span>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="alert-yes btn btn-secondary">确认发送</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,18 +171,75 @@
         </div>`;
 
     // 获取弹窗元素
+    let notice_modal = document.getElementsByClassName("notice-modal")[0];
+    let notice_msg = document.getElementById('notice-msg');
     let alert_modal = document.getElementsByClassName("alert-modal")[0];
     let alert_msg = document.getElementById('alert-msg');
     // 弹窗事件
-    function alertModal(msg, time) {
+    function noticeModal(msg, time) {
+        notice_msg.innerHTML = msg;
+        notice_modal.style.display = 'block';
+        notice_modal.classList.remove('animate__fadeOutDown');
+        notice_modal.classList.add('animate__fadeInDown');
+        document.getElementsByClassName('center-notice-modal')[0].style.zIndex = 2000;
+        setTimeout(() => {
+            notice_modal.classList.remove('animate__fadeInDown');
+            notice_modal.classList.add('animate__fadeOutDown');
+            document.getElementsByClassName('center-notice-modal')[0].style.zIndex = 0;
+        }, time);
+    }
+    function alertModal(msg) {
         alert_msg.innerHTML = msg;
         alert_modal.style.display = 'block';
         alert_modal.classList.remove('animate__fadeOutDown');
         alert_modal.classList.add('animate__fadeInDown');
-        setTimeout(() => {
+        document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 2000;
+        document.getElementsByClassName('alert-no')[0].onclick = function () {
             alert_modal.classList.remove('animate__fadeInDown');
             alert_modal.classList.add('animate__fadeOutDown');
-        }, time);
+            document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 0;
+        }
+        document.getElementsByClassName('alert-yes')[0].onclick = function () {
+            let author = document.getElementById('author').value;
+            let opus = document.getElementById('opus').value;
+            let tel = document.getElementById('tel').value;
+            let link = document.getElementById('link').value;
+            let about = document.getElementById('about').value;
+            let request = new XMLHttpRequest();
+            request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
+            request.setRequestHeader("Content-type", "application/json");
+            request.send(JSON.stringify({
+                "author": author,
+                "opus": opus,
+                "tel": tel,
+                "link": link,
+                "about": about,
+            }));
+            request.onreadystatechange = () => {
+                if (request.readyState === 4) {
+                    let res = JSON.parse(request.responseText);
+                    if (res.code == 1040) {
+                        noticeModal('发送失败：你的请求已被过滤 (￣^￣)ゞ', 3000);
+                    } else if (res.code == 1000) {
+                        document.getElementById('author').value = '';
+                        document.getElementById('opus').value = '';
+                        document.getElementById('tel').value = '';
+                        document.getElementById('link').value = '';
+                        document.getElementById('about').value = '';
+                        localStorage.setItem('is_sign_up', 1);
+                        document.getElementsByClassName('go-page-home')[0].onclick();
+                        noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
+                    } else if (res.status == 429) {
+                        noticeModal('发送失败：发送频率过高，请稍后再试！', 3000);
+                    } else {
+                        noticeModal('发送失败：服务器在摸鱼！', 3000);
+                    }
+                }
+            }
+            alert_modal.classList.remove('animate__fadeInDown');
+            alert_modal.classList.add('animate__fadeOutDown');
+            document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 0;
+        }
     }
 
     /*页面弹出的提示信息*/
@@ -173,6 +254,7 @@
         $confirm.classList.add('animate__fadeInRight');
         $confirm.classList.remove('animate__fadeOutRight');
         $confirm.classList.remove('animate__fadeOutLeft');
+        document.getElementById('confirm').style.zIndex = 2000;
         document.getElementsByClassName('sure')[0].onclick = function (e) {
             setTimeout(() => {
                 document.getElementById('confirm') && document.body.removeChild(document.getElementById('confirm'));
@@ -186,6 +268,7 @@
             $page_home.style.zIndex = 0;
             $page_home.classList.remove('animate__fadeInLeft');
             $page_home.classList.add('animate__fadeOutLeft');
+            document.getElementById('confirm').style.zIndex = 0;
             e.stopPropagation();
         };
         document.getElementsByClassName('not')[0].onclick = function (e) {
@@ -194,6 +277,7 @@
             }, 300);
             $confirm.classList.remove('animate__fadeInRight');
             $confirm.classList.add('animate__fadeOutRight');
+            document.getElementById('confirm').style.zIndex = 0;
             e.stopPropagation();
         };
     }
@@ -203,7 +287,6 @@
     let $page_input = document.getElementsByClassName('page-input')[0];
     let $page_home = document.getElementsByClassName('page-home')[0];
     setTimeout(() => {
-        // 报名成功
         $go_page_input.style.display = 'block';
         $go_page_input.classList.add('animate__zoomInDown');
     }, 80);
@@ -215,7 +298,7 @@
         if (!localStorage.getItem('is_sign_up')) {
             confirm();
         } else {
-            alertModal('您已成功报名',1200);
+            noticeModal('您已成功报名', 1200);
         }
     };
     $go_page_home.onclick = function () {
@@ -257,51 +340,21 @@
         let link = document.getElementById('link').value;
         let about = document.getElementById('about').value;
         if (!author || !opus || !tel || !link || !about) {
-            if (alert_modal.classList.contains('animate__fadeOutDown')) {
-                alertModal('请完整填写作品信息', 1200);
+            if (notice_modal.classList.contains('animate__fadeOutDown')) {
+                noticeModal('请完整填写作品信息', 1200);
             }
         } else if (author.length > 32) {
-            alertModal('作品名过长，已超出128个字符的限制', 1200);
+            noticeModal('作品名过长，已超出128个字符的限制', 1200);
         } else if (opus.length > 32) {
-            alertModal('作品名过长，已超出128个字符的限制', 1200);
+            noticeModal('作品名过长，已超出128个字符的限制', 1200);
         } else if (tel.length > 64) {
-            alertModal('联系方式过长，已超出128个字符的限制', 1200);
+            noticeModal('联系方式过长，已超出128个字符的限制', 1200);
         } else if (link.length > 32) {
-            alertModal('作品链接过长，已超出256个字符的限制', 1200);
+            noticeModal('作品链接过长，已超出256个字符的限制', 1200);
         } else if (about.length > 1024) {
-            alertModal('作品说明过长，已超出1024个字符的限制', 1200);
-        } else if (!alert_modal.classList.contains('animate__fadeInDown')) {
-            let request = new XMLHttpRequest();
-            request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
-            request.setRequestHeader("Content-type", "application/json");
-            request.send(JSON.stringify({
-                "author": author,
-                "opus": opus,
-                "tel": tel,
-                "link": link,
-                "about": about,
-            }));
-            request.onreadystatechange = () => {
-                if (request.readyState === 4) {
-                    let res = JSON.parse(request.responseText);
-                    if (res.code == 1040) {
-                        alertModal('发送失败：你的请求已被过滤 (￣^￣)ゞ', 3000);
-                    } else if (res.code == 1000) {
-                        document.getElementById('author').value = '';
-                        document.getElementById('opus').value = '';
-                        document.getElementById('tel').value = '';
-                        document.getElementById('link').value = '';
-                        document.getElementById('about').value = '';
-                        localStorage.setItem('is_sign_up', 1);
-                        document.getElementsByClassName('go-page-home')[0].onclick();
-                        alertModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
-                    } else if (res.status == 429) {
-                        alertModal('发送失败：发送频率过高，请稍后再试！', 3000);
-                    } else {
-                        alertModal('发送失败：服务器在摸鱼！', 3000);
-                    }
-                }
-            }
+            noticeModal('作品说明过长，已超出1024个字符的限制', 1200);
+        } else if (!notice_modal.classList.contains('animate__fadeInDown')) {
+            alertModal('是否确认发送');
         }
         e.stopPropagation();
     };
