@@ -12,8 +12,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="https://v4.bootcss.com/docs/4.6/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="iconfont/iconfont.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/animate.0.1.0.css">
+    <link rel="stylesheet" href="css/index.0.1.0.css">
 </head>
 
 <body>
@@ -220,7 +220,7 @@
         document.getElementsByClassName('alert-no')[0].onclick = function () {
             alert_modal.classList.remove('animate__fadeInDown');
             alert_modal.classList.add('animate__fadeOutDown');
-            document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 0;
+            document.getElementsByClassName('center-alert-modal')[0].style.zIndex = -1;
         }
         document.getElementsByClassName('alert-yes')[0].onclick = function () {
             let request = new XMLHttpRequest();
@@ -256,7 +256,7 @@
             }
             alert_modal.classList.remove('animate__fadeInDown');
             alert_modal.classList.add('animate__fadeOutDown');
-            document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 0;
+            document.getElementsByClassName('center-alert-modal')[0].style.zIndex = -1;
         }
     }
 
