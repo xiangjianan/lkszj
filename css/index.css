@@ -139,9 +139,18 @@ input::-ms-input-placeholder {
 }
 
 .center-row-alert {
-    height: 250px;
+    height: 100%;
     margin-top: -125px;
     top: 15%;
+}
+
+.center-row-alert>div, .center-row-alert>div>div {
+    height: 100%;
+}
+
+.center-row-alert div.modal-body {
+    height: 100%;
+    overflow: auto;
 }
 
 .notice-modal, .alert-modal {
@@ -157,10 +166,13 @@ input::-ms-input-placeholder {
 .alert-modal .modal-footer>div {
     margin: 0;
 }
-.alert-modal .modal-footer .btn{
+
+.alert-modal .modal-footer .btn {
     width: 100%;
 }
-
+.alert-title {
+    font-weight: bold;
+}
 .page-input,
 .page-home {
     height: 100%;
@@ -271,11 +283,6 @@ input::-ms-input-placeholder {
     width: 100%;
     height: 50px;
     border-top: 1px solid var(--slider);
-}
-
-.is-sign-up {
-    display: none;
-    text-align: center;
 }
 
 /*弹出信息*/

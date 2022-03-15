@@ -95,11 +95,20 @@
             <div class="alert-modal animate__animated animate__fadeOutDown col-md-6 offset-md-3">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h2 id="alert-msg"></h2>
+                        <h2 id="alert-title"></h2>
                     </div>
                     <div class="modal-body">
                         <div class="col-md-8 offset-md-2">
-                            simple
+                            <p class="alert-title">作者</p>
+                            <p class="alert-author"></p>
+                            <p class="alert-title">作品名</p>
+                            <p class="alert-opus"></p>
+                            <p class="alert-title">联系方式</p>
+                            <p class="alert-tel"></p>
+                            <p class="alert-title">作品链接</p>
+                            <p class="alert-link"></p>
+                            <p class="alert-title">作品说明</p>
+                            <p class="alert-about"></p>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -123,7 +132,6 @@
                 <br>
                 <div class="col-md-12">
                     <span class="go-page-input btn btn-secondary animate__animated">投稿</span>
-                    <span class="is-sign-up animate__animated animate__zoomInDown">报名成功</span>
                 </div>
             </div>
         </div>
@@ -174,7 +182,7 @@
     let notice_modal = document.getElementsByClassName("notice-modal")[0];
     let notice_msg = document.getElementById('notice-msg');
     let alert_modal = document.getElementsByClassName("alert-modal")[0];
-    let alert_msg = document.getElementById('alert-msg');
+    let alert_title = document.getElementById('alert-title');
     // 弹窗事件
     function noticeModal(msg, time) {
         notice_msg.innerHTML = msg;
@@ -189,8 +197,18 @@
         }, time);
     }
     function alertModal(msg) {
-        alert_msg.innerHTML = msg;
+        let author = document.getElementById('author').value;
+        let opus = document.getElementById('opus').value;
+        let tel = document.getElementById('tel').value;
+        let link = document.getElementById('link').value;
+        let about = document.getElementById('about').value;
+        alert_title.innerHTML = msg;
         alert_modal.style.display = 'block';
+        document.getElementsByClassName('alert-author')[0].innerHTML = author;
+        document.getElementsByClassName('alert-opus')[0].innerHTML = opus;
+        document.getElementsByClassName('alert-tel')[0].innerHTML = tel;
+        document.getElementsByClassName('alert-link')[0].innerHTML = link;
+        document.getElementsByClassName('alert-about')[0].innerHTML = about;
         alert_modal.classList.remove('animate__fadeOutDown');
         alert_modal.classList.add('animate__fadeInDown');
         document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 2000;
@@ -200,11 +218,6 @@
             document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 0;
         }
         document.getElementsByClassName('alert-yes')[0].onclick = function () {
-            let author = document.getElementById('author').value;
-            let opus = document.getElementById('opus').value;
-            let tel = document.getElementById('tel').value;
-            let link = document.getElementById('link').value;
-            let about = document.getElementById('about').value;
             let request = new XMLHttpRequest();
             request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
             request.setRequestHeader("Content-type", "application/json");
@@ -298,7 +311,7 @@
         if (!localStorage.getItem('is_sign_up')) {
             confirm();
         } else {
-            noticeModal('您已成功报名', 1200);
+            noticeModal('您已报名成功', 1200);
         }
     };
     $go_page_home.onclick = function () {
