@@ -425,6 +425,9 @@ input::-ms-input-placeholder {
     #confirm .confirms .confirm-text {
         height: 60%;
     }
+    #confirm .confirms .confirm-disclaimer-text {
+        height: 70%;
+    }
 
     #confirm .confirms span.sure {
         margin-top: 15px;

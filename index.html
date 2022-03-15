@@ -313,7 +313,7 @@
         document.getElementsByClassName('close-disclaimer')[0].onclick = function (e) {
             setTimeout(() => {
                 document.getElementById('confirm') && document.body.removeChild(document.getElementById('confirm'));
-            }, 300);
+            }, 800);
             $confirm.classList.remove('animate__fadeIn');
             $confirm.classList.add('animate__fadeOut');
             document.getElementById('confirm').style.zIndex = 0;
@@ -404,7 +404,7 @@
         <div class="confirms container">
             <div class="col-md-8 offset-md-2">
                 <p class="confirm-title">活动信息</p>
-                <div class="confirm-text">
+                <div class="confirm-text confirm-disclaimer-text">
                     <p>每个人在生命中都会创造一些美好的东西，它们往往倾注了我们大量的心血，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
                     <p>详情请见 - BVXXXXXXXXX</p>
                     <p class="little-title">【基本规则】</p>
