@@ -12,6 +12,14 @@ body {
     font-family: 'Work Sans', sans-serif;
     background-color: #fff;
     /* background-image: url('../img/blue.png'); */
+    /* background-color: #FEE140;
+    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 33%, #ffffff 66%, #ffffff 100%);
+    background: #f7ff00; */
+    /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #db36a4, #f7ff00); */
+    /* Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #db36a4, #f7ff00); */
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     -o-user-select: none;
     -moz-user-select: none;
@@ -180,6 +188,16 @@ input::-ms-input-placeholder {
 .page-input,
 .page-home {
     height: 100%;
+}
+
+.page-home h1 {
+    background-color: #FEE140;
+    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 33%, #ffffff 66%, #ffffff 100%);
+    background: linear-gradient(to right, red, blue);
+    background: linear-gradient(90deg, #FEE140 0%, #FA709A 33%, rgba(34, 34, 187,0.7) 66%, rgba(26, 26, 192,0.8) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+
 }
 
 .header {
@@ -456,10 +474,12 @@ input::-ms-input-placeholder {
     .alert-modal .modal-footer .btn.alert-no {
         margin-bottom: 4px;
     }
+
     .alert-modal .modal-footer .btn.alert-yes {
         margin-top: 4px;
     }
-    .center-alert-modal{
+
+    .center-alert-modal {
         height: 70%;
     }
 }
