@@ -228,7 +228,9 @@
         setTimeout(() => {
             notice_modal.classList.remove('animate__fadeInDown');
             notice_modal.classList.add('animate__fadeOutDown');
-            document.getElementsByClassName('center-notice-modal')[0].style.zIndex = -1;
+            setTimeout(() => {
+                document.getElementsByClassName('center-notice-modal')[0].style.zIndex = -1;
+            }, 300);
         }, time);
     }
     function alertModal(msg) {
