@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://v4.bootcss.com/docs/4.6/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="iconfont/iconfont.css">
     <link rel="stylesheet" href="css/animate.0.1.0.css">
-    <link rel="stylesheet" href="css/index.0.1.1.css">
+    <link rel="stylesheet" href="css/index.0.1.2.css">
 </head>
 
 <body>
@@ -31,27 +31,33 @@
             </div>
         </div>
         <div class="header-right">
-            <div class="time">
-                <span id="t_h"></span>
-            </div>
-            <div class="time time-m">
-                </span><span id="t_m">
-            </div>
-            <div class="time">
-                <span id="t_s"></span>
-            </div>
-            <div class="time-day">
-                <span class="iconfont" id="t_d"></span>
-            </div>
-        </div>
-        <div class="outer">
-
+            <span class="countdown-title">距离征集结束还有</span>
+            <ul id="countdown">
+                <li id="days">
+                    <div id="t_d" class="number">00</div>
+                    <div class="label">天</div>
+                </li>
+                <li id="hours">
+                    <div id="t_h" class="number">00</div>
+                    <div class="label">时</div>
+                </li>
+                <li id="minutes">
+                    <div id="t_m" class="number">00</div>
+                    <div class="label">分</div>
+                </li>
+                <li id="seconds">
+                    <div id="t_s" class="number">00</div>
+                    <div class="label">秒</div>
+                </li>
+            </ul>
         </div>
     </div>
     <div class="footer">
         <div class="disclaimer">
             <div>
-                <span>Copyright © 2022 <a ontouchstart="" href="https://space.bilibili.com/125526/" target="_blank" rel="nofollow noreferrer">-LKs-</a> <a ontouchstart="" href="https://github.com/xiangjianan/" target="_blank" rel="nofollow noreferrer">xiangjianan</a></span>
+                <span>Copyright © 2022 <a ontouchstart="" href="https://space.bilibili.com/125526/" target="_blank"
+                        rel="nofollow noreferrer">-LKs-</a> <a ontouchstart="" href="https://github.com/xiangjianan/"
+                        target="_blank" rel="nofollow noreferrer">xiangjianan</a></span>
                 <span> | </span>
                 <span ontouchstart="" class="disclaimer-btn">活动介绍&免责声明</span>
             </div>
@@ -148,7 +154,7 @@
             <div class="col-md-8 offset-md-2">
                 <p class="confirm-title">活动信息</p>
                 <div class="confirm-text">
-                    <p>每个人在生命中都会创造一些美好的东西，它们往往倾注了我们大量的心血，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
+                    <p>2020年至今人们的生活发生了很多改变，但不变的是仍有许多人在创造着美好的事物，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
                     <p>详情请见 - BVXXXXXXXXX</p>
                     <p class="little-title">【基本规则】</p>
                     <p>1. 可以投稿任何类型的作品，音乐、绘画、摄影、文字、有实体的手工/雕塑/模型、甚至某个天马行空的想法等等。</p>
@@ -156,21 +162,45 @@
                     <p>3. 这件作品需要由你本人独立/主要完成，不能为别人代投。</p>
                     <p>4. 这件作品的完成时间需要在2020年以后。</p>
                     <p>5. 这件作品不能存在版权/知识产权/著作权/原创性等方面的争议。</p>
-                    <p>6. 请准确填写投稿信息，以便获奖后我可以联系到你。</p>
+                    <p>6. 公司/企业性质的投稿可能无法参与评奖，已经在其他大赛得过大奖的作品可能无法参与评奖。</p>
+                    <p>7. 请准确填写投稿信息，以便获奖后我可以联系到你。</p>
                     <p class="little-title">【活动信息】</p>
-                    <p>1. 征集从2022年x月x日开始持续到2022年x月x日，此后投稿功能会被关闭。</p>
+                    <p>1. 征集从2022年3月21日开始持续到2022年4月11日，此后投稿功能会被关闭。</p>
                     <p>2. 征集将选出金奖、银奖和铜奖以及10个优秀提名，奖品分别是：</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币X元+板状海蓝宝石晶体共生叶钠长石 (配图)</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币X元+连晶黄铁矿 (配图)</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币X元+荧光方解石晶体 (配图)</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀奖 - ?</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石丨人民币5000元+徕芬高速吹风机×5</p>
+                    <p>
+                        <img class="gift-img" src="img/blue-gift.png" alt="blue-gift">
+                        <img src="img/wind-gray.png" alt="wind">
+                        <img src="img/wind-pink.png" alt="wind">
+                        <img src="img/wind-green.png" alt="wind">
+                        <img src="img/wind-white.png" alt="wind">
+                        <img src="img/wind-gray.png" alt="wind">
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿丨人民币3000元+徕芬高速吹风机×3</p>
+                    <p>
+                        <img class="gift-img" src="img/gold-gift.jpeg" alt="gold-gift">
+                        <img src="img/wind-gray.png" alt="wind">
+                        <img src="img/wind-pink.png" alt="wind">
+                        <img src="img/wind-white.png" alt="wind">
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石丨人民币2000元+徕芬高速吹风机×2</p>
+                    <p>
+                        <img class="gift-img" src="img/white-gift.jpeg" alt="white-gift">
+                        <img src="img/wind-gray.png" alt="wind">
+                        <img src="img/wind-white.png" alt="wind">
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币100元丨人民币500元+徕芬高速吹风</p>
+                    <p>
+                        <img class="gift-img" src="img/wind-white.png" alt="wind">
+                    </p>
+                    <p>*特别鸣谢：部份奖金和奖品由【laifen 徕芬】赞助</p>
+                    <p style="text-align: center;"><img class="logo2" src="img/logo2.png" alt="logo2"></p>
                     <p class="little-title">【免责声明】</p>
                     <p>投稿作品即表示你已经阅读并同意以下说明：</p>
                     <p>1. 你清楚并同意上传的作品可能会被公开分享。</p>
                     <p>2. 全程遵守国家法律与政策，请勿上传各类违规/敏感内容，即使上传也会被人工筛选和删除。</p>
                     <p>3. 避免上传非原创、未经创作者本人许可、存在大量参考借鉴的内容，对作品的原创性负责。</p>
-                    <p>4. 本征集为非盈利活动，无任何利益相关。</p>
-                    <p>5. 如活动期间遇到不可抗力或其他意外因素，征集可能会被迫中止。</p>
+                    <p>4. 如活动期间遇到不可抗力或其他意外因素，征集可能会被迫中止。</p>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
@@ -198,7 +228,7 @@
         setTimeout(() => {
             notice_modal.classList.remove('animate__fadeInDown');
             notice_modal.classList.add('animate__fadeOutDown');
-            document.getElementsByClassName('center-notice-modal')[0].style.zIndex = 0;
+            document.getElementsByClassName('center-notice-modal')[0].style.zIndex = -1;
         }, time);
     }
     function alertModal(msg) {
@@ -229,6 +259,7 @@
             request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
             request.setRequestHeader("Content-type", "application/json");
             request.send(JSON.stringify({
+                "create_time": getTime(),
                 "author": author,
                 "opus": opus,
                 "tel": tel,
@@ -264,10 +295,22 @@
         }
     }
 
+    // 时间戳
+    function getTime() {
+        let data = new Date();
+        let y = data.getFullYear();
+        let m = data.getMonth() + 1;
+        let d = data.getDate();
+        let H = data.getHours();
+        let M = data.getMinutes();
+        let S = data.getSeconds();
+        return `${y}-${m}-${d} ${H}:${M}:${S}`
+    };
+
     /*页面弹出的提示信息*/
     function confirm(msg, okCallback, cancleCallback) {
         if (document.getElementById('confirm')) return false;
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         div.id = 'confirm';
         div.innerHTML = msg;
         document.body.appendChild(div);
@@ -305,7 +348,7 @@
     }
     function confirm_disclaimer(msg, okCallback, cancleCallback) {
         if (document.getElementById('confirm')) return false;
-        var div = document.createElement('div');
+        let div = document.createElement('div');
         div.id = 'confirm';
         div.innerHTML = msg;
         document.body.appendChild(div);
@@ -360,28 +403,25 @@
         return (Array(n).join(0) + num).slice(-n);
     }
     function getRTime() {
-        let EndTime = new Date('2022/3/16 20:03:00');
+        let EndTime = new Date('2022/4/11 00:00:00');
         let NowTime = new Date();
         let t = EndTime.getTime() - NowTime.getTime();
         let d = Math.floor(t / 1000 / 60 / 60 / 24);
         let h = PrefixInteger(Math.floor(t / 1000 / 60 / 60 % 24), 2);
         let m = PrefixInteger(Math.floor(t / 1000 / 60 % 60), 2);
         let s = PrefixInteger(Math.floor(t / 1000 % 60), 2);
-        if (d < 0){
-            d = 0;
-            h = 0;
-            m = 0;
-            s = 0;
-            document.getElementById("t_d").innerHTML = "&#xe609;" + d + "天";
-            document.getElementById("t_h").innerHTML = h + "时";
-            document.getElementById("t_m").innerHTML = m + "分";
-            document.getElementById("t_s").innerHTML = s + "秒";
-            // noticeModal('活动结束');
-        }else {
-            document.getElementById("t_d").innerHTML = "&#xe609;" + d + "天";
-            document.getElementById("t_h").innerHTML = h + "时";
-            document.getElementById("t_m").innerHTML = m + "分";
-            document.getElementById("t_s").innerHTML = s + "秒";
+        if (d < 0) {
+            document.getElementById("t_d").innerHTML = 0;
+            document.getElementById("t_h").innerHTML = 0;
+            document.getElementById("t_m").innerHTML = 0;
+            document.getElementById("t_s").innerHTML = 0;
+            noticeModal('活动结束');
+            clearInterval(x);
+        } else {
+            document.getElementById("t_d").innerHTML = d;
+            document.getElementById("t_h").innerHTML = h;
+            document.getElementById("t_m").innerHTML = m;
+            document.getElementById("t_s").innerHTML = s;
         }
     }
     getRTime();
@@ -421,7 +461,7 @@
             <div class="col-md-8 offset-md-2">
                 <p class="confirm-title">活动信息</p>
                 <div class="confirm-text confirm-disclaimer-text">
-                    <p>每个人在生命中都会创造一些美好的东西，它们往往倾注了我们大量的心血，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
+                    <p>2020年至今人们的生活发生了很多改变，但不变的是仍有许多人在创造着美好的事物，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
                     <p>详情请见 - BVXXXXXXXXX</p>
                     <p class="little-title">【基本规则】</p>
                     <p>1. 可以投稿任何类型的作品，音乐、绘画、摄影、文字、有实体的手工/雕塑/模型、甚至某个天马行空的想法等等。</p>
@@ -429,21 +469,45 @@
                     <p>3. 这件作品需要由你本人独立/主要完成，不能为别人代投。</p>
                     <p>4. 这件作品的完成时间需要在2020年以后。</p>
                     <p>5. 这件作品不能存在版权/知识产权/著作权/原创性等方面的争议。</p>
-                    <p>6. 请准确填写投稿信息，以便获奖后我可以联系到你。</p>
+                    <p>6. 公司/企业性质的投稿可能无法参与评奖，已经在其他大赛得过大奖的作品可能无法参与评奖。</p>
+                    <p>7. 请准确填写投稿信息，以便获奖后我可以联系到你。</p>
                     <p class="little-title">【活动信息】</p>
-                    <p>1. 征集从2022年x月x日开始持续到2022年x月x日，此后投稿功能会被关闭。</p>
+                    <p>1. 征集从2022年3月21日开始持续到2022年4月11日，此后投稿功能会被关闭。</p>
                     <p>2. 征集将选出金奖、银奖和铜奖以及10个优秀提名，奖品分别是：</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币X元+板状海蓝宝石晶体共生叶钠长石 (配图)</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币X元+连晶黄铁矿 (配图)</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币X元+荧光方解石晶体 (配图)</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀奖 - ?</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石丨人民币5000元+徕芬高速吹风机×5</p>
+                    <p>
+                        <img class="gift-img" src="img/blue-gift.png" alt="blue-gift">
+                        <img src="img/wind-gray.png" alt="wind">
+                        <img src="img/wind-pink.png" alt="wind">
+                        <img src="img/wind-green.png" alt="wind">
+                        <img src="img/wind-white.png" alt="wind">
+                        <img src="img/wind-gray.png" alt="wind">
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿丨人民币3000元+徕芬高速吹风机×3</p>
+                    <p>
+                        <img class="gift-img" src="img/gold-gift.jpeg" alt="gold-gift">
+                        <img src="img/wind-gray.png" alt="wind">
+                        <img src="img/wind-pink.png" alt="wind">
+                        <img src="img/wind-white.png" alt="wind">
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石丨人民币2000元+徕芬高速吹风机×2</p>
+                    <p>
+                        <img class="gift-img" src="img/white-gift.jpeg" alt="white-gift">
+                        <img src="img/wind-gray.png" alt="wind">
+                        <img src="img/wind-white.png" alt="wind">
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币100元丨人民币500元+徕芬高速吹风</p>
+                    <p>
+                        <img class="gift-img" src="img/wind-white.png" alt="wind">
+                    </p>
+                    <p>*特别鸣谢：部份奖金和奖品由【laifen 徕芬】赞助</p>
+                    <p style="text-align: center;"><img class="logo2" src="img/logo2.png" alt="logo2"></p>
                     <p class="little-title">【免责声明】</p>
                     <p>投稿作品即表示你已经阅读并同意以下说明：</p>
                     <p>1. 你清楚并同意上传的作品可能会被公开分享。</p>
                     <p>2. 全程遵守国家法律与政策，请勿上传各类违规/敏感内容，即使上传也会被人工筛选和删除。</p>
                     <p>3. 避免上传非原创、未经创作者本人许可、存在大量参考借鉴的内容，对作品的原创性负责。</p>
-                    <p>4. 本征集为非盈利活动，无任何利益相关。</p>
-                    <p>5. 如活动期间遇到不可抗力或其他意外因素，征集可能会被迫中止。</p>
+                    <p>4. 如活动期间遇到不可抗力或其他意外因素，征集可能会被迫中止。</p>
                 </div>
                 <div class="row">
                     <div class="col-md-12">

@@ -126,6 +126,15 @@ input::-ms-input-placeholder {
     left: 0;
 }
 
+.center-notice-modal {
+    top: 0;
+    z-index: -1;
+}
+
+.center-notice-modal h2#notice-msg {
+    font-size: 1.2rem;
+}
+
 .center-row {
     width: 100%;
     position: absolute;
@@ -190,21 +199,19 @@ input::-ms-input-placeholder {
     height: 100%;
 }
 
+.page-home, .page-home>div {
+    padding: 0;
+}
+
 .page-home h1 {
-    background-color: #FEE140;
-    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 33%, #ffffff 66%, #ffffff 100%);
-    background: linear-gradient(to right, red, blue);
-    background: linear-gradient(90deg, #FEE140 0%, #FA709A 33%, rgba(34, 34, 187,0.7) 66%, rgba(26, 26, 192,0.8) 100%);
+    background: linear-gradient(45deg, rgba(26, 26, 192, 0.8) 0%, rgba(34, 34, 187, 0.7) 33%, #FA709A 66%, #FEE140 100%);
     -webkit-background-clip: text;
     color: transparent;
-
 }
 
 .header {
     width: 100%;
     height: 82px;
-    border-top: 1px solid var(--slider);
-    border-bottom: 1px solid var(--slider);
     z-index: 1000;
 }
 
@@ -218,7 +225,6 @@ input::-ms-input-placeholder {
     position: relative;
     width: 100%;
     height: 77px;
-    border-bottom: 1px solid var(--slider);
 }
 
 .header-left-logo a {
@@ -237,10 +243,8 @@ input::-ms-input-placeholder {
 
 .header-center {
     float: left;
-    width: 64%;
+    width: 70%;
     height: 82px;
-    border-left: 1px solid var(--slider);
-    border-right: 1px solid var(--slider);
 }
 
 .header-center h2 {
@@ -251,48 +255,51 @@ input::-ms-input-placeholder {
 }
 
 .header-right {
+    position: relative;
     float: left;
-    width: 18%;
+    width: 12%;
     height: 82px;
 }
 
-.header-right h2 {
-    text-align: center;
-}
-
-.time {
-    float: left;
-    width: 33%;
-    height: 30px;
-    border-bottom: 1px solid var(--slider);
-}
-
-.time span {
+.header-right .countdown-title {
+    position: absolute;
+    top: 5px;
     width: 100%;
-    line-height: 30px;
-    display: inline-block;
     text-align: center;
+    font-size: 12px;
+    color: #555;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, rgba(26, 26, 192, 0.8) 0%, rgba(34, 34, 187, 0.7) 33%, #FA709A 66%, #FEE140 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-.time-m {
-    border-left: 1px solid var(--slider);
-    border-right: 1px solid var(--slider);
-}
-
-.time-day #t_d {
+ul#countdown {
     position: relative;
-    display: inline-block;
-    width: 100%;
-    line-height: 50px;
-    text-align: center;
-    font-size: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0 10px 0;
+    color: #333;
+    border-width: 1px 0;
+    overflow: hidden;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
 }
 
-.outer {
-    float: left;
-    width: 100%;
-    height: 40px;
-    border-bottom: 1px solid var(--slider);
+ul#countdown li {
+    margin: 0 -3px 0 0;
+    padding: 0;
+    display: inline-block;
+    width: 25%;
+    font-size: 22px;
+    text-align: center;
+}
+
+ul#countdown li .label {
+    color: #adafb2;
+    font-size: 12px;
 }
 
 .footer {
@@ -300,8 +307,6 @@ input::-ms-input-placeholder {
     bottom: 0;
     width: 100%;
     height: 50px;
-    border-top: 1px solid var(--slider);
-    border-bottom: 1px solid var(--slider);
 }
 
 .footer .disclaimer {
@@ -362,6 +367,16 @@ input::-ms-input-placeholder {
     margin-bottom: 8px;
     letter-spacing: 2px;
 }
+#confirm .confirms p .gift-img {
+    margin-left: 20px;
+}
+#confirm .confirms p img{
+    height: 120px;
+    border-radius: 60px;
+}
+#confirm .confirms p .logo2{
+    height: 60px;
+}
 
 #confirm .confirms p.confirm-title {
     margin: 20px 0 30px;
@@ -400,6 +415,24 @@ input::-ms-input-placeholder {
     color: #111;
 }
 
+@media (min-width: 1280px) and (max-width: 1410px) {
+    h1 {
+        font-size: 3.598rem;
+    }
+}
+
+@media (min-width: 1140px) and (max-width: 1280px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+}
+
+@media (min-width: 599px) and (max-width: 1140px) {
+    h1 {
+        font-size: 3.0rem;
+    }
+}
+
 @media only screen and (min-width: 280px) and (max-width: 599px) {
     h1 {
         font-size: 2.998rem;
@@ -411,8 +444,6 @@ input::-ms-input-placeholder {
 
     .header-right {
         width: 64%;
-        border-left: 1px solid var(--slider);
-        border-right: 1px solid var(--slider);
     }
 
     .countdown {
@@ -481,5 +512,16 @@ input::-ms-input-placeholder {
 
     .center-alert-modal {
         height: 70%;
+    }
+
+    #confirm .confirms p .gift-img {
+        margin-left: 20px;
+    }
+    #confirm .confirms p img{
+        height: 80px;
+        border-radius: 60px;
+    }
+    #confirm .confirms p .logo2{
+        height: 40px;
     }
 }
