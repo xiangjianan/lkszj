@@ -10,16 +10,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
-    background-color: #fff;
-    /* background-image: url('../img/blue.png'); */
-    /* background-color: #FEE140;
-    background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 33%, #ffffff 66%, #ffffff 100%);
-    background: #f7ff00; */
-    /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to right, #db36a4, #f7ff00); */
-    /* Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to right, #db36a4, #f7ff00); */
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: rgba(0, 0, 0, 0);
     background-size: cover;
     -o-user-select: none;
     -moz-user-select: none;
@@ -39,6 +30,8 @@ a,
 a:hover,
 .disclaimer-btn,
 .disclaimer-btn:hover,
+textarea,
+textarea:focus,
 input,
 input:focus {
     -webkit-transition: all .2s ease-in-out;
@@ -54,7 +47,7 @@ h1 {
     text-align: center;
 }
 
-input {
+input, textarea {
     background: none;
     outline: none;
     border: none;
@@ -64,7 +57,21 @@ input {
     display: block;
     text-align: center;
     height: 40px;
+    font-size: 14px;
     border-bottom: 2px solid #888;
+}
+
+textarea {
+    height: 120px;
+    border: 2px solid #888;
+    margin-top: 20px;
+    text-align: center;
+    resize: none;
+    padding: 10px;
+}
+
+textarea:focus {
+    border: 2px solid var(--slider);
 }
 
 input:focus {
@@ -88,8 +95,15 @@ input::-ms-input-placeholder {
 
 .btn-center {
     float: right;
-    width: 46%;
-    margin: 0 2%;
+    width: 43%;
+}
+
+.btn-center#send {
+    margin: 0 5% 0 2%;
+}
+
+.btn-center.go-page-home {
+    margin: 0 2% 0 5%;
 }
 
 .go-page-input {
@@ -142,8 +156,8 @@ input::-ms-input-placeholder {
 }
 
 .center-row-input {
-    height: 262px;
-    margin-top: -131px;
+    height: 362px;
+    margin-top: -181px;
 }
 
 .center-row-home {
@@ -194,6 +208,10 @@ input::-ms-input-placeholder {
     font-weight: bold;
 }
 
+.alert-modal .modal-body>div>p {
+    text-align: center;
+}
+
 .page-input,
 .page-home {
     height: 100%;
@@ -234,7 +252,6 @@ input::-ms-input-placeholder {
     color: black;
     width: 58px;
     margin-left: 24px;
-    border: 1px solid rgba(33, 33, 33, 1);
 }
 
 .header-left-logo img {
@@ -289,17 +306,18 @@ ul#countdown {
 }
 
 ul#countdown li {
-    margin: 0 -3px 0 0;
+    margin: 0;
     padding: 0;
     display: inline-block;
     width: 25%;
     font-size: 22px;
     text-align: center;
+    float: left;
 }
 
 ul#countdown li .label {
     color: #adafb2;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .footer {
@@ -324,17 +342,19 @@ ul#countdown li .label {
 }
 
 .footer .disclaimer>div>span {
-    font-size: 14px;
+    font-size: 12px;
     color: #787878;
 }
 
 .footer .disclaimer>div a, .footer .disclaimer>div .disclaimer-btn {
-    color: #333;
+    position: relative;
+    color: #666;
     cursor: pointer;
 }
 
+
 .footer .disclaimer>div a:hover, .footer .disclaimer>div .disclaimer-btn:hover {
-    color: #888;
+    color: #000;
 }
 
 /*弹出信息*/
@@ -367,14 +387,17 @@ ul#countdown li .label {
     margin-bottom: 8px;
     letter-spacing: 2px;
 }
+
 #confirm .confirms p .gift-img {
     margin-left: 20px;
 }
-#confirm .confirms p img{
+
+#confirm .confirms p img {
     height: 120px;
     border-radius: 60px;
 }
-#confirm .confirms p .logo2{
+
+#confirm .confirms p .logo2 {
     height: 60px;
 }
 
@@ -517,11 +540,17 @@ ul#countdown li .label {
     #confirm .confirms p .gift-img {
         margin-left: 20px;
     }
-    #confirm .confirms p img{
+
+    #confirm .confirms p img {
         height: 80px;
         border-radius: 60px;
     }
-    #confirm .confirms p .logo2{
+
+    #confirm .confirms p .logo2 {
         height: 40px;
+    }
+
+    .center-notice-modal {
+        top: 10%;
     }
 }

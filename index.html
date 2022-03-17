@@ -79,7 +79,7 @@
                     <input id="link" type="text" placeholder="作品链接(网盘Link，视频/音乐/图库网址等)">
                 </div>
                 <div class="col-md-12">
-                    <input id="about" type="text" placeholder="作品说明(创作灵感，你的想法，希望大家了解的信息等等)">
+                    <textarea id="about" placeholder="作品说明(创作灵感，你的想法，希望大家了解的信息等等)"></textarea>
                 </div>
                 <br>
                 <div class="col-md-12">
@@ -245,7 +245,7 @@
         document.getElementsByClassName('alert-opus')[0].innerHTML = opus;
         document.getElementsByClassName('alert-tel')[0].innerHTML = tel;
         document.getElementsByClassName('alert-link')[0].innerHTML = link;
-        document.getElementsByClassName('alert-about')[0].innerHTML = about;
+        document.getElementsByClassName('alert-about')[0].innerHTML = about.replace(/\n/g, '<br>');
         alert_modal.classList.remove('animate__fadeOutDown');
         alert_modal.classList.add('animate__fadeInDown');
         document.getElementsByClassName('center-alert-modal')[0].style.zIndex = 2000;
@@ -269,22 +269,22 @@
             }));
             request.onreadystatechange = () => {
                 if (request.readyState === 4) {
-                    let res = JSON.parse(request.responseText);
-                    if (res.code == 1040) {
-                        noticeModal('发送失败：你的请求已被过滤 (￣^￣)ゞ', 3000);
-                    } else if (res.code == 1000) {
-                        document.getElementById('author').value = '';
-                        document.getElementById('opus').value = '';
-                        document.getElementById('tel').value = '';
-                        document.getElementById('link').value = '';
-                        document.getElementById('about').value = '';
-                        localStorage.setItem('is_sign_up', 1);
-                        document.getElementsByClassName('go-page-home')[0].onclick();
-                        noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
-                    } else if (res.status == 429) {
-                        noticeModal('发送失败：发送频率过高，请稍后再试！', 3000);
+                    if (request.responseText) {
+                        let res = JSON.parse(request.responseText);
+                        if (res.code == 1000) {
+                            document.getElementById('author').value = '';
+                            document.getElementById('opus').value = '';
+                            document.getElementById('tel').value = '';
+                            document.getElementById('link').value = '';
+                            document.getElementById('about').value = '';
+                            localStorage.setItem('is_sign_up', 1);
+                            document.getElementsByClassName('go-page-home')[0].onclick();
+                            noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
+                        } else {
+                            noticeModal('发送失败：服务器在摸鱼！', 3000);
+                        }
                     } else {
-                        noticeModal('发送失败：服务器在摸鱼！', 3000);
+                        noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                     }
                 }
             }
