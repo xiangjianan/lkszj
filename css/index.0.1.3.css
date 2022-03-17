@@ -597,13 +597,8 @@ ul#countdown li .label {
         height: 70%;
     }
 
-    #confirm .confirms p .gift-img {
-        margin-left: 20px;
-    }
-
     #confirm .confirms p img {
         height: 80px;
-        border-radius: 60px;
     }
 
     #confirm .confirms p .logo2 {
