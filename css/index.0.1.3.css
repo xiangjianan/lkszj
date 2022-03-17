@@ -387,16 +387,16 @@ ul#countdown li .label {
     letter-spacing: 2px;
 }
 
-#confirm .confirms p .gift-img {
-    margin-left: 20px;
-}
-
-#confirm .confirms p img {
-    height: 120px;
+#confirm .confirms .gift-img {
+    margin-left: 88px;
     border-radius: 60px;
 }
 
-#confirm .confirms p .logo2 {
+#confirm .confirms img {
+    height: 120px;
+}
+
+#confirm .confirms .logo2 {
     height: 60px;
 }
 
@@ -437,19 +437,73 @@ ul#countdown li .label {
     color: #111;
 }
 
-@media (min-width: 1280px) and (max-width: 1410px) {
+@media (min-width: 1140px) and (max-width: 1410px) {
     h1 {
         font-size: 3.598rem;
     }
 }
 
-@media (min-width: 1140px) and (max-width: 1280px) {
+@media (min-width: 992px) and (max-width: 1219px) {
     h1 {
-        font-size: 3.2rem;
+        font-size: 3.5rem;
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .header-right {
+        width: 64%;
+    }
+
+    .offset-md-3 {
+        margin: 0;
+    }
+
+    .col-md-6 {
+        max-width: 100%;
+    }
+
+    #confirm .confirms .gift-img {
+        margin-left: 116px;
+    }
+
+    #wind-1 {
+        margin-left: 323px !important;
     }
 }
 
-@media (min-width: 599px) and (max-width: 1140px) {
+@media (min-width: 768px) and (max-width: 991px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .header-right {
+        width: 64%;
+    }
+
+    .offset-md-3 {
+        margin: 0;
+    }
+
+    .col-md-6 {
+        max-width: 100%;
+    }
+
+    #confirm .confirms .gift-img {
+        margin-left: 40px;
+    }
+
+    #wind-1 {
+        margin-left: 245px !important;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
     h1 {
         font-size: 3.0rem;
     }
@@ -460,6 +514,22 @@ ul#countdown li .label {
 
     .header-right {
         width: 64%;
+    }
+
+    .alert-modal .modal-footer .btn.alert-no {
+        margin-bottom: 4px;
+    }
+
+    .alert-modal .modal-footer .btn.alert-yes {
+        margin-top: 4px;
+    }
+
+    #confirm .confirms .gift-img {
+        margin-left: 40px;
+    }
+
+    #wind-1 {
+        margin-left: 245px !important;
     }
 }
 
@@ -542,5 +612,13 @@ ul#countdown li .label {
 
     .center-notice-modal {
         top: 10%;
+    }
+
+    #confirm .confirms .gift-img {
+        margin-left: 40px;
+    }
+
+    #wind-1 {
+        margin-left: 186px !important;
     }
 }
