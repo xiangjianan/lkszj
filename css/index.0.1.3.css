@@ -64,7 +64,6 @@ input, textarea {
 textarea {
     height: 120px;
     border: 2px solid #888;
-    margin-top: 20px;
     text-align: center;
     resize: none;
     padding: 10px;
@@ -156,8 +155,8 @@ input::-ms-input-placeholder {
 }
 
 .center-row-input {
-    height: 362px;
-    margin-top: -181px;
+    height: 366px;
+    margin-top: -183px;
 }
 
 .center-row-home {
