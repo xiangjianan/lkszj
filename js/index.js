@@ -1,59 +1,59 @@
 let disclaimer = `
-    <div class="confirms container">
-        <div class="col-md-8 offset-md-2">
-            <p class="confirm-title">活动信息</p>
-            <div class="confirm-text">
-                <p>2020年至今人们的生活发生了很多改变，但不变的是仍有许多人在创造着美好的事物，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
-                <p>详情请见 - BVXXXXXXXXX</p>
-                <p class="little-title">【基本规则】</p>
-                <p>1. 可以投稿任何类型的作品，音乐、绘画、摄影、文字、有实体的手工/雕塑/模型、甚至某个天马行空的想法等等。</p>
-                <p>2. 作品需要上传到网盘或视频平台(实物作品可以拍照/拍视频后上传)。</p>
-                <p>3. 这件作品需要由你本人独立/主要完成，不能为别人代投。</p>
-                <p>4. 这件作品的完成时间需要在2020年以后。</p>
-                <p>5. 这件作品不能存在版权/知识产权/著作权/原创性等方面的争议。</p>
-                <p>6. 公司/企业性质的投稿可能无法参与评奖，已经在其他大赛得过大奖的作品可能无法参与评奖。</p>
-                <p>7. 请准确填写投稿信息，以便获奖后我可以联系到你。</p>
-                <p class="little-title">【活动信息】</p>
-                <p>1. 征集从2022年3月21日开始持续到2022年4月11日，此后投稿功能会被关闭。</p>
-                <p>2. 征集将选出金奖、银奖和铜奖以及10个优秀提名，奖品分别是：</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石丨人民币5000元+徕芬高速吹风机×5</p>
-                <p>
-                    <img class="gift-img" src="img/blue-gift.jpeg" alt="blue-gift">
-                    <img style="margin-left:50px;" src="img/5.png" alt="wind">
-                </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿丨人民币3000元+徕芬高速吹风机×3</p>
-                <p>
-                    <img class="gift-img" src="img/gold-gift.jpeg" alt="gold-gift">
-                    <img style="margin-left:65px;" src="img/3.png" alt="wind">
-                </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石丨人民币2000元+徕芬高速吹风机×2</p>
-                <p>
-                    <img class="gift-img" src="img/white-gift.jpeg" alt="white-gift">
-                    <img style="margin-left:78px;" src="img/2.png" alt="wind">
-                </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币1000元丨人民币500元+徕芬高速吹风</p>
-                <p>
-                    <img id="wind-1" style="margin-left:293px;" src="img/1.png" alt="wind">
-                </p>
-                <p>*特别鸣谢：部份奖金和奖品由【laifen 徕芬】赞助</p>
-                <p style="text-align: center;"><img class="logo2" src="img/logo2.png" alt="logo2"></p>
-                <p class="little-title">【免责声明】</p>
-                <p>投稿作品即表示你已经阅读并同意以下说明：</p>
-                <p>1. 你清楚并同意上传的作品可能会被公开分享。</p>
-                <p>2. 全程遵守国家法律与政策，请勿上传各类违规/敏感内容，即使上传也会被人工筛选和删除。</p>
-                <p>3. 避免上传非原创、未经创作者本人许可、存在大量参考借鉴的内容，对作品的原创性负责。</p>
-                <p>4. 如活动期间遇到不可抗力或其他意外因素，征集可能会被迫中止。</p>
+<div class="confirms container">
+    <div class="col-md-8 offset-md-2">
+        <p class="confirm-title">活动信息</p>
+        <div class="confirm-text">
+            <p>2020年至今人们的生活发生了很多改变，但不变的是仍有许多人在创造着美好的事物，如果你愿意与大家分享你的作品，欢迎大力投稿参与这次活动:D</p>
+            <p>详情请见 - BVXXXXXXXXX</p>
+            <p class="little-title">【基本规则】</p>
+            <p>1. 可以投稿任何类型的作品，音乐、绘画、摄影、文字、有实体的手工/雕塑/模型、甚至某个天马行空的想法等等。</p>
+            <p>2. 作品需要上传到网盘或视频平台(实物作品可以拍照/拍视频后上传)。</p>
+            <p>3. 这件作品需要由你本人独立/主要完成，不能为别人代投。</p>
+            <p>4. 这件作品的完成时间需要在2020年以后。</p>
+            <p>5. 这件作品不能存在版权/知识产权/著作权/原创性等方面的争议。</p>
+            <p>6. 公司/企业性质的投稿可能无法参与评奖，已经在其他大赛得过大奖的作品可能无法参与评奖。</p>
+            <p>7. 请准确填写投稿信息，以便获奖后我可以联系到你。</p>
+            <p class="little-title">【活动信息】</p>
+            <p>1. 征集从2022年3月21日开始持续到2022年4月11日，此后投稿功能会被关闭。</p>
+            <p>2. 征集将选出金奖、银奖和铜奖以及10个优秀提名，奖品分别是：</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石丨人民币5000元+徕芬高速吹风机×5</p>
+            <p>
+                <img class="gift-img" src="img/blue-gift.jpeg" alt="blue-gift">
+                <img style="margin-left:50px;" src="img/5.png" alt="wind">
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿丨人民币3000元+徕芬高速吹风机×3</p>
+            <p>
+                <img class="gift-img" src="img/gold-gift.jpeg" alt="gold-gift">
+                <img style="margin-left:65px;" src="img/3.png" alt="wind">
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石丨人民币2000元+徕芬高速吹风机×2</p>
+            <p>
+                <img class="gift-img" src="img/white-gift.jpeg" alt="white-gift">
+                <img style="margin-left:78px;" src="img/2.png" alt="wind">
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币1000元丨人民币500元+徕芬高速吹风</p>
+            <p>
+                <img id="wind-1" style="margin-left:293px;" src="img/1.png" alt="wind">
+            </p>
+            <p>*特别鸣谢：部份奖金和奖品由【laifen 徕芬】赞助</p>
+            <p style="text-align: center;"><img class="logo2" src="img/logo2.png" alt="logo2"></p>
+            <p class="little-title">【免责声明】</p>
+            <p>投稿作品即表示你已经阅读并同意以下说明：</p>
+            <p>1. 你清楚并同意上传的作品可能会被公开分享。</p>
+            <p>2. 全程遵守国家法律与政策，请勿上传各类违规/敏感内容，即使上传也会被人工筛选和删除。</p>
+            <p>3. 避免上传非原创、未经创作者本人许可、存在大量参考借鉴的内容，对作品的原创性负责。</p>
+            <p>4. 如活动期间遇到不可抗力或其他意外因素，征集可能会被迫中止。</p>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <span class="btn not col-md-12">再想想</span>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <span class="btn not col-md-12">再想想</span>
-                </div>
-                <div class="col-md-6">
-                    <span class="btn sure col-md-12">确认同意</span>
-                </div>
+            <div class="col-md-6">
+                <span class="btn sure col-md-12">确认同意</span>
             </div>
         </div>
-    </div>`;
+    </div>
+</div>`;
 
 // 获取弹窗元素
 let notice_modal = document.getElementsByClassName("notice-modal")[0];
@@ -122,6 +122,8 @@ function alertModal(msg) {
                         localStorage.setItem('is_sign_up', 1);
                         document.getElementsByClassName('go-page-home')[0].onclick();
                         noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
+                    } else if(res.code == 429){
+                        noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                     } else {
                         noticeModal('发送失败：服务器在摸鱼！', 3000);
                     }
@@ -198,66 +200,6 @@ function confirm_disclaimer(msg, okCallback, cancleCallback) {
         e.stopPropagation();
     };
 }
-
-// 初始化
-let $go_page_input = document.getElementsByClassName('go-page-input')[0];
-let $go_page_home = document.getElementsByClassName('go-page-home')[0];
-let $page_input = document.getElementsByClassName('page-input')[0];
-let $page_home = document.getElementsByClassName('page-home')[0];
-setTimeout(() => {
-    $go_page_input.style.display = 'block';
-    $go_page_input.classList.add('animate__zoomInDown');
-}, 80);
-setTimeout(() => {
-    document.documentElement.style.setProperty('--animate-duration', '0.6s');
-}, 1200);
-
-// 页面切换
-$go_page_input.onclick = function () {
-    if (!localStorage.getItem('is_sign_up')) {
-        confirm(disclaimer);
-    } else {
-        noticeModal('您已报名成功', 1200);
-    }
-};
-$go_page_home.onclick = function () {
-    $page_home.classList.remove('animate__fadeOutLeft');
-    $page_home.classList.add('animate__fadeInLeft');
-    $page_home.style.zIndex = 999;
-    $page_input.style.zIndex = 0;
-    $page_input.classList.remove('animate__fadeInRight');
-    $page_input.classList.add('animate__fadeOutRight');
-};
-
-// 倒计时
-function PrefixInteger(num, n) {
-    return (Array(n).join(0) + num).slice(-n);
-}
-function getRTime() {
-    let EndTime = new Date('2022/4/11 00:00:00');
-    let NowTime = new Date();
-    let t = EndTime.getTime() - NowTime.getTime();
-    let d = Math.floor(t / 1000 / 60 / 60 / 24);
-    let h = PrefixInteger(Math.floor(t / 1000 / 60 / 60 % 24), 2);
-    let m = PrefixInteger(Math.floor(t / 1000 / 60 % 60), 2);
-    let s = PrefixInteger(Math.floor(t / 1000 % 60), 2);
-    if (d < 0) {
-        document.getElementById("t_d").innerHTML = 0;
-        document.getElementById("t_h").innerHTML = 0;
-        document.getElementById("t_m").innerHTML = 0;
-        document.getElementById("t_s").innerHTML = 0;
-        noticeModal('活动结束');
-        clearInterval(x);
-    } else {
-        document.getElementById("t_d").innerHTML = d;
-        document.getElementById("t_h").innerHTML = h;
-        document.getElementById("t_m").innerHTML = m;
-        document.getElementById("t_s").innerHTML = s;
-    }
-}
-getRTime();
-setInterval(getRTime, 1000);
-
 // 投稿
 let send = document.getElementById('send');
 send.onclick = function (e) {
