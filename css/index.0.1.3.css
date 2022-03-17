@@ -453,6 +453,14 @@ ul#countdown li .label {
     h1 {
         font-size: 3.0rem;
     }
+
+    .header-center {
+        display: none;
+    }
+
+    .header-right {
+        width: 64%;
+    }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
@@ -468,26 +476,9 @@ ul#countdown li .label {
         width: 64%;
     }
 
-    .countdown {
-        display: none;
-    }
-
     .header-left-logo a {
         margin-left: 5px;
         padding: 5px 3px;
-        font-size: 1.8rem;
-    }
-
-    .time {
-        height: 40px;
-    }
-
-    .time span {
-        line-height: 40px;
-    }
-
-    .time-day #t_d {
-        line-height: 40px;
         font-size: 1.8rem;
     }
 
