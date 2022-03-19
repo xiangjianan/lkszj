@@ -99,6 +99,7 @@ function alertModal(msg) {
         }, 300);
     }
     document.getElementsByClassName('alert-yes')[0].onclick = function () {
+        document.getElementById('send').disabled=true;
         let request = new XMLHttpRequest();
         request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
         request.setRequestHeader("Content-type", "application/json");
@@ -130,6 +131,7 @@ function alertModal(msg) {
                 } else {
                     noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                 }
+                document.getElementById('send').disabled=false;
             }
         }
         alert_modal.classList.remove('animate__fadeInDown');
