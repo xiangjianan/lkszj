@@ -209,10 +209,10 @@ document.getElementsByClassName('disclaimer-btn')[0].onclick = function () {
 }
 
 // 百度统计
-let _hmt = _hmt || [];
-(function () {
-    let hm = document.createElement("script");
-    hm.src = "https://hm.baidu.com/hm.js?cc0e888dcf9f87025b43b42e6fbed048";
-    let s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hm, s);
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?cc0e888dcf9f87025b43b42e6fbed048";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
 })();
