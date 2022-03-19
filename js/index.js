@@ -212,13 +212,13 @@ send.onclick = function (e) {
         if (notice_modal.classList.contains('animate__fadeOutDown')) {
             noticeModal('请完整填写作品信息', 1200);
         }
-    } else if (author.length > 32) {
+    } else if (author.length > 128) {
         noticeModal('作品名过长，已超出128个字符的限制', 1200);
-    } else if (opus.length > 32) {
+    } else if (opus.length > 128) {
         noticeModal('作品名过长，已超出128个字符的限制', 1200);
-    } else if (tel.length > 64) {
+    } else if (tel.length > 128) {
         noticeModal('联系方式过长，已超出128个字符的限制', 1200);
-    } else if (link.length > 32) {
+    } else if (link.length > 256) {
         noticeModal('作品链接过长，已超出256个字符的限制', 1200);
     } else if (about.length > 1024) {
         noticeModal('作品说明过长，已超出1024个字符的限制', 1200);

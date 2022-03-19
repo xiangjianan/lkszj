@@ -211,6 +211,10 @@ input::-ms-input-placeholder {
     text-align: center;
 }
 
+.alert-link {
+    word-wrap: break-word;
+}
+
 .page-input,
 .page-home {
     height: 100%;
