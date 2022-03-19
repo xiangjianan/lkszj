@@ -99,7 +99,7 @@ function alertModal(msg) {
         }, 300);
     }
     document.getElementsByClassName('alert-yes')[0].onclick = function () {
-        document.getElementById('send').disabled=true;
+        document.getElementById('send').disabled = true;
         let request = new XMLHttpRequest();
         request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
         request.setRequestHeader("Content-type", "application/json");
@@ -123,7 +123,7 @@ function alertModal(msg) {
                         localStorage.setItem('is_sign_up', 1);
                         document.getElementsByClassName('go-page-home')[0].onclick();
                         noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
-                    } else if(res.code == 429){
+                    } else if (res.code == 429) {
                         noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                     } else {
                         noticeModal('发送失败：服务器在摸鱼！', 3000);
@@ -131,7 +131,7 @@ function alertModal(msg) {
                 } else {
                     noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                 }
-                document.getElementById('send').disabled=false;
+                document.getElementById('send').disabled = false;
             }
         }
         alert_modal.classList.remove('animate__fadeInDown');
@@ -141,6 +141,31 @@ function alertModal(msg) {
         }, 300);
     }
 }
+
+// 页面切换
+let $go_page_home = document.getElementsByClassName('go-page-home')[0];
+let $page_input = document.getElementsByClassName('page-input')[0];
+let $page_home = document.getElementsByClassName('page-home')[0];
+$go_page_input.onclick = function () {
+    if (localStorage.getItem('is_over')) {
+        noticeModal('活动已结束', 1200);
+    } else if (!localStorage.getItem('is_sign_up')) {
+        confirm(disclaimer);
+    } else {
+        noticeModal('您已报名成功', 1200);
+    }
+};
+$go_page_home.onclick = function () {
+    $page_home.classList.remove('animate__fadeOutLeft');
+    $page_home.classList.add('animate__fadeInLeft');
+    $page_home.style.zIndex = 999;
+    $page_input.style.zIndex = 0;
+    setTimeout(() => {
+        $page_input.style.display = 'none';
+    }, 1000);
+    $page_input.classList.remove('animate__fadeInRight');
+    $page_input.classList.add('animate__fadeOutRight');
+};
 
 /*页面弹出的提示信息*/
 function confirm(msg, okCallback, cancleCallback) {
