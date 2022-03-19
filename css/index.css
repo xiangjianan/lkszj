@@ -390,10 +390,12 @@ ul#countdown li .label {
     margin-bottom: 8px;
     letter-spacing: 2px;
 }
-#confirm .confirms p a{
+
+#confirm .confirms p a {
     color: #f4f4f4;
 }
-#confirm .confirms p a:hover{
+
+#confirm .confirms p a:hover {
     color: #777;
 }
 
@@ -401,6 +403,7 @@ ul#countdown li .label {
 #confirm .confirms .gift-img {
     margin-left: 88px;
     border-radius: 60px;
+    width: 120px;
 }
 
 #confirm .confirms img {
@@ -608,11 +611,15 @@ ul#countdown li .label {
         height: 70%;
     }
 
-    #confirm .confirms p img {
+    #confirm .confirms .gift-img {
+        width: 80px;
+    }
+
+    #confirm .confirms img {
         height: 80px;
     }
 
-    #confirm .confirms p .logo2 {
+    #confirm .confirms .logo2 {
         height: 40px;
     }
 
