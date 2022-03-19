@@ -483,7 +483,7 @@ ul#countdown li .label {
     }
 
     #wind-1 {
-        margin-left: 323px !important;
+        margin-left: 316px !important;
     }
 }
 
@@ -513,7 +513,7 @@ ul#countdown li .label {
     }
 
     #wind-1 {
-        margin-left: 245px !important;
+        margin-left: 240px !important;
     }
 }
 
@@ -543,7 +543,7 @@ ul#countdown li .label {
     }
 
     #wind-1 {
-        margin-left: 245px !important;
+        margin-left: 240px !important;
     }
 }
 
@@ -630,8 +630,13 @@ ul#countdown li .label {
     #confirm .confirms .gift-img {
         margin-left: 20px;
     }
-
+    .wind-img-3 {
+        margin-left: 60px !important;
+    }
+    .wind-img-2 {
+        margin-left: 69px !important;
+    }
     #wind-1 {
-        margin-left: 186px !important;
+        margin-left: 170px !important;
     }
 }
