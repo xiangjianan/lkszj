@@ -441,9 +441,9 @@ ul#countdown li .label {
     color: #111;
 }
 
-@media (min-width: 1140px) and (max-width: 1410px) {
+@media (min-width: 1220px) and (max-width: 1410px) {
     h1 {
-        font-size: 3.598rem;
+        font-size: 3.45rem;
     }
 }
 
