@@ -16,22 +16,22 @@ let disclaimer = `
             <p class="little-title">【活动信息】</p>
             <p>1. 征集从2022年3月21日开始持续到2022年4月11日，此后投稿功能会被关闭。</p>
             <p>2. 征集将选出金奖、银奖和铜奖以及10个优秀提名，奖品分别是：</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石丨人民币5000元+徕芬高速吹风机×5</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石 & 人民币5000元+徕芬高速吹风机×5</p>
             <p>
                 <img class="gift-img" src="img/blue-gift.jpeg" alt="blue-gift">
                 <img style="margin-left:50px;" src="img/5.png" alt="wind">
             </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿丨人民币3000元+徕芬高速吹风机×3</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿 & 人民币3000元+徕芬高速吹风机×3</p>
             <p>
                 <img class="gift-img" src="img/gold-gift.jpeg" alt="gold-gift">
                 <img style="margin-left:65px;" src="img/3.png" alt="wind">
             </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石丨人民币2000元+徕芬高速吹风机×2</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石 & 人民币2000元+徕芬高速吹风机×2</p>
             <p>
                 <img class="gift-img" src="img/white-gift.jpeg" alt="white-gift">
                 <img style="margin-left:78px;" src="img/2.png" alt="wind">
             </p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币1000元丨人民币500元+徕芬高速吹风</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币100元 & 人民币500元+徕芬高速吹风</p>
             <p>
                 <img id="wind-1" style="margin-left:293px;" src="img/1.png" alt="wind">
             </p>
@@ -247,22 +247,22 @@ let disclaimer_footer = `
                 <p class="little-title">【活动信息】</p>
                 <p>1. 征集从2022年3月21日开始持续到2022年4月11日，此后投稿功能会被关闭。</p>
                 <p>2. 征集将选出金奖、银奖和铜奖以及10个优秀提名，奖品分别是：</p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石丨人民币5000元+徕芬高速吹风机×5</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;金奖 - 人民币5000元+海蓝宝石 & 人民币5000元+徕芬高速吹风机×5</p>
                 <p>
                     <img class="gift-img" src="img/blue-gift.jpeg" alt="blue-gift">
                     <img style="margin-left:50px;" src="img/5.png" alt="wind">
                 </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿丨人民币3000元+徕芬高速吹风机×3</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;银奖 - 人民币3000元+连晶黄铁矿 & 人民币3000元+徕芬高速吹风机×3</p>
                 <p>
                     <img class="gift-img" src="img/gold-gift.jpeg" alt="gold-gift">
                     <img style="margin-left:65px;" src="img/3.png" alt="wind">
                 </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石丨人民币2000元+徕芬高速吹风机×2</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;铜奖 - 人民币2000元+荧光方解石 & 人民币2000元+徕芬高速吹风机×2</p>
                 <p>
                     <img class="gift-img" src="img/white-gift.jpeg" alt="white-gift">
                     <img style="margin-left:78px;" src="img/2.png" alt="wind">
                 </p>
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币1000元丨人民币500元+徕芬高速吹风</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;优秀提名 - 人民币100元 & 人民币500元+徕芬高速吹风</p>
                 <p>
                     <img id="wind-1" style="margin-left:293px;" src="img/1.png" alt="wind">
                 </p>
