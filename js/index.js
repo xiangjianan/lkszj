@@ -68,6 +68,8 @@ function alertModal(msg) {
                         localStorage.setItem('is_sign_up', 1);
                         document.getElementsByClassName('go-page-home')[0].onclick();
                         noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
+                    } else if (res.code == 1080) {
+                        noticeModal('活动已结束 (｡･ω･｡)ﾉ', 3000);
                     } else if (res.code == 429) {
                         noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                     } else {
@@ -93,7 +95,7 @@ let $page_input = document.getElementsByClassName('page-input')[0];
 let $page_home = document.getElementsByClassName('page-home')[0];
 $go_page_input.onclick = function () {
     if (localStorage.getItem('is_over')) {
-        noticeModal('活动已结束', 1200);
+        noticeModal('活动已结束 (｡･ω･｡)ﾉ', 1200);
     } else if (!localStorage.getItem('is_sign_up')) {
         confirm(disclaimer);
     } else {
