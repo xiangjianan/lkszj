@@ -17,16 +17,16 @@
 
    - 金奖 - 人民币5000元+海蓝宝石 & 人民币5000元+徕芬高速吹风机×5 
 
-     <img src="https://cdn.helloxjn.com/blue-gift.jpeg" alt="1" style="zoom:10%" /><img src="https://cdn.helloxjn.com/5.png" alt="1" style="zoom:10%" />
+     <img src="https://cdn.helloxjn.com/lkszj/blue-gift.jpeg" alt="1" style="zoom:10%" /><img src="https://cdn.helloxjn.com/lkszj/5.png" alt="1" style="zoom:10%" />
 
    - 银奖 - 人民币3000元+连晶黄铁矿 & 人民币3000元+徕芬高速吹风机×3 
-     <img src="https://cdn.helloxjn.com/gold-gift.jpeg" alt="1" style="zoom:10%" /><img src="https://cdn.helloxjn.com/3.png" alt="1" style="zoom:10%" />
+     <img src="https://cdn.helloxjn.com/lkszj/gold-gift.jpeg" alt="1" style="zoom:10%" /><img src="https://cdn.helloxjn.com/lkszj/3.png" alt="1" style="zoom:10%" />
 
    - 铜奖 - 人民币2000元+荧光方解石 & 人民币2000元+徕芬高速吹风机×2
-     <img src="https://cdn.helloxjn.com/white-gift.jpeg" alt="1" style="zoom:10%" /><img src="https://cdn.helloxjn.com/2.png" alt="1" style="zoom:10%" />
+     <img src="https://cdn.helloxjn.com/lkszj/white-gift.jpeg" alt="1" style="zoom:10%" /><img src="https://cdn.helloxjn.com/lkszj/2.png" alt="1" style="zoom:10%" />
 
    - 优秀提名 - 人民币100元 & 人民币500元+徕芬高速吹风机 
-     <img src="https://cdn.helloxjn.com/1.png" alt="1" style="zoom:10%" />
+     <img src="https://cdn.helloxjn.com/lkszj/1.png" alt="1" style="zoom:10%" />
 
    *特别鸣谢：部份奖金和奖品由【laifen 徕芬】赞助
 
