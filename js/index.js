@@ -209,9 +209,11 @@ document.getElementsByClassName('disclaimer-btn')[0].onclick = function () {
 }
 
 // 统计
-let request_log = new XMLHttpRequest();
-request_log.open('POST', "https://api.lks.helloxjn.com/share/v1/log/", true);
-request_log.setRequestHeader("Content-type", "application/json");
-request_log.send(JSON.stringify({
-    "web": 'lkszj',
-}));
+setTimeout(() => {
+    let request_log = new XMLHttpRequest();
+    request_log.open('POST', "https://api.lks.helloxjn.com/share/v1/log/", true);
+    request_log.setRequestHeader("Content-type", "application/json");
+    request_log.send(JSON.stringify({
+        "web": 'lkszj',
+    }));
+}, 2000);
