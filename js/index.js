@@ -208,11 +208,10 @@ document.getElementsByClassName('disclaimer-btn')[0].onclick = function () {
     confirm_disclaimer(disclaimer_footer);
 }
 
-// 百度统计
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?cc0e888dcf9f87025b43b42e6fbed048";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
+// 统计
+let request_log = new XMLHttpRequest();
+request_log.open('POST', "https://api.lks.helloxjn.com/share/v1/log/", true);
+request_log.setRequestHeader("Content-type", "application/json");
+request_log.send(JSON.stringify({
+    "web": 'lkszj',
+}));
