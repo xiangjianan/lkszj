@@ -390,6 +390,13 @@ ul#countdown li .label {
     margin-bottom: 8px;
     letter-spacing: 2px;
 }
+#confirm .confirms p a{
+    color: #f4f4f4;
+}
+#confirm .confirms p a:hover{
+    color: #777;
+}
+
 
 #confirm .confirms .gift-img {
     margin-left: 88px;
