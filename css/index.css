@@ -566,6 +566,11 @@ ul#countdown li .label {
         font-size: 1.8rem;
     }
 
+    .center-row-home {
+        height: 184px;
+        margin-top: -92px;
+    }
+
     #confirm .confirms p.confirm-title {
         margin: 40px 0 30px;
     }
@@ -642,4 +647,5 @@ ul#countdown li .label {
     #wind-1 {
         margin-left: 170px !important;
     }
+
 }
