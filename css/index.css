@@ -119,7 +119,7 @@ input::-ms-input-placeholder {
 
 .btn-secondary:focus {
     color: #333;
-    background-color: rgba(233, 233, 235, 0);
+    background-color: rgba(233, 233, 235, 0)!important;
     border-color: rgba(33, 33, 33, 1);
     box-shadow: none;
 }
