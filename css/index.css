@@ -352,9 +352,14 @@ ul#countdown li .label {
 
 .footer .disclaimer>div {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.footer .disclaimer>div.gitee {
+    top: 62%;
 }
 
 .footer .disclaimer>div>span {
