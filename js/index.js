@@ -215,4 +215,11 @@ setTimeout(() => {
     request_log.send(JSON.stringify({
         "web": 'lkszj',
     }));
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?cc0e888dcf9f87025b43b42e6fbed048";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
 }, 2000);
