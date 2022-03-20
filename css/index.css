@@ -417,11 +417,14 @@ ul#countdown li .label {
     color: #777;
 }
 
-
 #confirm .confirms .gift-img {
     margin-left: 88px;
     border-radius: 60px;
     width: 120px;
+}
+
+#confirm .confirms .gift-span {
+    font-weight: 900;
 }
 
 #confirm .confirms img {
