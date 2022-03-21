@@ -58,6 +58,8 @@ function alertModal(msg) {
             if (request.readyState === 4) {
                 if (request.responseText) {
                     let res = JSON.parse(request.responseText);
+                    console.log(res);
+                    console.log(res.code);
                     if (res.code == 1000) {
                         document.getElementById('author').value = '';
                         document.getElementById('opus').value = '';
@@ -69,10 +71,8 @@ function alertModal(msg) {
                         noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
                     } else if (res.code == 1080) {
                         noticeModal('活动已结束 (｡･ω･｡)ﾉ', 3000);
-                    } else if (res.code == 429) {
-                        noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                     } else {
-                        noticeModal('发送失败：服务器在摸鱼！', 3000);
+                        noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
                     }
                 } else {
                     noticeModal('发送失败：您已超出投稿次数限制 (｡･ω･｡)ﾉ', 3000);
