@@ -58,8 +58,6 @@ function alertModal(msg) {
             if (request.readyState === 4) {
                 if (request.responseText) {
                     let res = JSON.parse(request.responseText);
-                    console.log(res);
-                    console.log(res.code);
                     if (res.code == 1000) {
                         document.getElementById('author').value = '';
                         document.getElementById('opus').value = '';
