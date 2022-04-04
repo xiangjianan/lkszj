@@ -66,7 +66,7 @@ function alertModal(msg) {
                         document.getElementById('about').value = '';
                         localStorage.setItem('is_sign_up', 1);
                         document.getElementsByClassName('go-page-home')[0].onclick();
-                        noticeModal('已发送：感谢投稿 (゜-゜)つロ', 3000);
+                        noticeModal(`已发送：您是第${res.data.count}位投稿人，感谢投稿 (゜-゜)つロ`, 3000);
                     } else if (res.code == 1080) {
                         noticeModal('活动已结束 (｡･ω･｡)ﾉ', 3000);
                     } else {
