@@ -32,6 +32,8 @@ a:hover,
 .disclaimer-btn:hover,
 textarea,
 textarea:focus,
+ul#countdown.award-btn:hover,
+ul#countdown.award-btn,
 input,
 input:focus {
     -webkit-transition: all .2s ease-in-out;
@@ -333,6 +335,15 @@ ul#countdown li {
 ul#countdown li .label {
     color: #adafb2;
     font-size: 10px;
+}
+
+ul#countdown.award-btn {
+    cursor: pointer;
+    padding: 0;
+    border-bottom: 1px solid #fff;
+}
+ul#countdown.award-btn:hover {
+    border-color: #333;
 }
 
 .footer {
