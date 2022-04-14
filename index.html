@@ -10,191 +10,81 @@
     <title>作品征集</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="https://v4.bootcss.com/docs/4.6/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="font/iconfont.css">
-    <link rel="stylesheet" href="css/index.min.2.1.2.css">
+    <style>
+        html,
+        body {
+            font-family: "Microsoft Yahei Light","Microsoft Yahei",PingFangSC-Regular,Helvetica,sans-serif;;
+            background-color: rgba(0, 0, 0, 0);
+            background-size: cover;
+            -o-user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+        }
+
+        div {
+            position: absolute;
+            width: 300px;
+            height: 100px;
+            border: 1px solid #333;
+            border-radius: 5px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        span {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .title {
+            height: 15px;
+            line-height: 15px;
+            font-size: 12px;
+            margin-top: 15px;
+        }
+
+        .link {
+            height: 70px;
+            line-height: 55px;
+            font-size: 30px;
+            font-weight: blod;
+            letter-spacing: 2px;
+        }
+
+        div:hover {
+            background-color: #333;
+            color: #eee;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+            color: rgb(35, 31, 32);
+        }
+
+        div:hover,
+        div {
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="header">
-        <div class="header-left">
-            <div class="header-left-logo">
-                <a href="https://xiangjianan.gitee.io/lkszj/" target="_self">
-                    <img src="https://cdn.helloxjn.com/lkszj/logo-black.png" alt="logo">
-                </a>
-            </div>
+    <a href="https://lkszj.info" target="_blank">
+        <div>
+            <span class="title">作品征集</span>
+            <span class="link">lkszj.info</span>
         </div>
-        <div class="header-center">
-            <div class="header-title">
-                <h2></h2>
-            </div>
-        </div>
-        <div class="header-right">
-            <span class="countdown-title">距离征集结束还有</span>
-            <ul id="countdown">
-                <li id="days">
-                    <div id="t_d" class="number">00</div>
-                    <div class="label">天</div>
-                </li>
-                <li id="hours">
-                    <div id="t_h" class="number">00</div>
-                    <div class="label">时</div>
-                </li>
-                <li id="minutes">
-                    <div id="t_m" class="number">00</div>
-                    <div class="label">分</div>
-                </li>
-                <li id="seconds">
-                    <div id="t_s" class="number">00</div>
-                    <div class="label">秒</div>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <div class="footer">
-        <div class="disclaimer">
-            <div>
-                <span>Copyright © 2022 <a ontouchstart="" href="https://space.bilibili.com/125526/" target="_blank"
-                        rel="nofollow noreferrer">-LKs-</a> <a ontouchstart="" href="https://gitee.com/xiangjianan/"
-                        target="_blank" rel="nofollow noreferrer">xiangjianan</a></span>
-                <span> | </span>
-                <span ontouchstart="" class="disclaimer-btn">活动介绍&免责声明</span>
-            </div>
-            <div class="gitee">
-                <span ontouchstart="" class="disclaimer-btn"><a rel="nofollow" target="_blank" href="https://beian.miit.gov.cn/">粤ICP备12009483号-9</a></span>
-            </div>
-        </div>
-    </div>
-    <div class="center">
-        <div class="center-row center-row-input">
-            <div class="page-input animate__animated col-md-6 offset-md-3">
-                <div class="col-md-12">
-                    <input id="author" type="text" placeholder="作者">
-                </div>
-                <div class="col-md-12">
-                    <input id="opus" type="text" placeholder="作品名">
-                </div>
-                <div class="col-md-12">
-                    <input id="tel" type="text" placeholder="联系方式(QQ/微信/邮箱等)">
-                </div>
-                <div class="col-md-12">
-                    <input id="link" type="text" placeholder="作品链接(网盘Link，视频/音乐/图库网址等)">
-                </div>
-                <br>
-                <div class="col-md-12">
-                    <textarea id="about" placeholder="作品说明(创作灵感，你的想法，希望大家了解的信息等等)"></textarea>
-                </div>
-                <br>
-                <div class="col-md-12">
-                    <button id="send" ontouchstart="" class="btn-center btn btn-secondary">发送</button>
-                    <button ontouchstart="" class="go-page-home btn-center btn btn-secondary">返回</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 弹框部分 -->
-    <div class="center center-notice-modal">
-        <div class="center-row center-row-notice">
-            <div class="notice-modal animate__animated animate__fadeOutDown col-md-6 offset-md-3">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 id="notice-msg"></h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="center center-alert-modal">
-        <div class="center-row center-row-alert">
-            <div class="alert-modal animate__animated animate__fadeOutDown col-md-6 offset-md-3">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 id="alert-title"></h2>
-                    </div>
-                    <div class="modal-body">
-                        <div class="col-md-8 offset-md-2">
-                            <p class="alert-title">作者</p>
-                            <p class="alert-author"></p>
-                            <p class="alert-title">作品名</p>
-                            <p class="alert-opus"></p>
-                            <p class="alert-title">联系方式</p>
-                            <p class="alert-tel"></p>
-                            <p class="alert-title">作品链接</p>
-                            <p class="alert-link"></p>
-                            <p class="alert-title">作品说明</p>
-                            <p class="alert-about"></p>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="col-md-6">
-                            <span ontouchstart="" class="alert-no btn btn-secondary">再想想</span>
-                        </div>
-                        <div class="col-md-6">
-                            <span ontouchstart="" class="alert-yes btn btn-secondary">确认发送</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="center">
-        <div class="center-row center-row-home">
-            <div class="page-home animate__animated col-md-6 offset-md-3">
-                <div class="col-md-12">
-                    <h1 class="title animate__animated animate__zoomInDown">与世界分享你创造的美好</h1>
-                </div>
-                <br>
-                <div class="col-md-12">
-                    <span ontouchstart="" class="go-page-input btn btn-secondary animate__animated">投稿</span>
-                </div>
-            </div>
-        </div>
-    </div>
+    </a>
 </body>
-<script>
-    // 初始化
-    let $go_page_input = document.getElementsByClassName('go-page-input')[0];
-
-    setTimeout(() => {
-        $go_page_input.style.display = 'block';
-        $go_page_input.classList.add('animate__zoomInDown');
-    }, 80);
-    setTimeout(() => {
-        document.documentElement.style.setProperty('--animate-duration', '0.6s');
-    }, 1200);
-
-    // 倒计时
-    function PrefixInteger(num, n) {
-        return (Array(n).join(0) + num).slice(-n);
-    }
-    function getRTime() {
-        let EndTime = new Date('2022/4/11 00:00:00');
-        let NowTime = new Date();
-        let t = EndTime.getTime() - NowTime.getTime();
-        let d = Math.floor(t / 1000 / 60 / 60 / 24);
-        let h = PrefixInteger(Math.floor(t / 1000 / 60 / 60 % 24), 2);
-        let m = PrefixInteger(Math.floor(t / 1000 / 60 % 60), 2);
-        let s = PrefixInteger(Math.floor(t / 1000 % 60), 2);
-        let $d = document.getElementById("t_d");
-        let $h = document.getElementById("t_h");
-        let $m = document.getElementById("t_m");
-        let $s = document.getElementById("t_s");
-        if (d < 0) {
-            $d.innerHTML = 0;
-            $h.innerHTML = 0;
-            $m.innerHTML = 0;
-            $s.innerHTML = 0;
-            localStorage.setItem('is_over', 1);
-        } else {
-            $d.innerHTML = d;
-            $h.innerHTML = h;
-            $m.innerHTML = m;
-            $s.innerHTML = s;
-        }
-    }
-    getRTime();
-    let x = setInterval(getRTime, 1000);
-</script>
-<script defer src="js/index.min.2.1.2.js"></script>
 
 </html>
