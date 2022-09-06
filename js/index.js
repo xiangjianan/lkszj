@@ -45,7 +45,7 @@ function alertModal(msg) {
     document.getElementsByClassName('alert-yes')[0].onclick = function () {
         document.getElementById('send').disabled = true;
         let request = new XMLHttpRequest();
-        request.open('POST', "https://api.lks.helloxjn.com/share/v1", true);
+        request.open('POST', "https://lks.helloxjn.com/share/v1", true);
         request.setRequestHeader("Content-type", "application/json");
         request.send(JSON.stringify({
             "author": author,
@@ -208,7 +208,7 @@ document.getElementsByClassName('disclaimer-btn')[0].onclick = function () {
 // 统计
 setTimeout(() => {
     let request_log = new XMLHttpRequest();
-    request_log.open('POST', "https://api.lks.helloxjn.com/share/v1/log/", true);
+    request_log.open('POST', "https://lks.helloxjn.com/share/v1/log/", true);
     request_log.setRequestHeader("Content-type", "application/json");
     request_log.send(JSON.stringify({
         "web": 'lkszj',
